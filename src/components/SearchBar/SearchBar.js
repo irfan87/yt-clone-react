@@ -3,7 +3,7 @@ import "./SearchBar.css";
 
 export default class SearchBar extends Component {
 	state = {
-		searchVideo: "",
+		searchVideo: "test",
 	};
 
 	// for input when it change
