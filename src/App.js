@@ -1,8 +1,13 @@
-import React from "react";
+import React, { Component } from "react";
 import "./App.css";
+import SearchBar from "./components/SearchBar/SearchBar";
 
-function App() {
-	return <div className="App">YouTube Clone App</div>;
+export default class App extends Component {
+	render() {
+		return (
+			<div>
+				<SearchBar />
+			</div>
+		);
+	}
 }
-
-export default App;
