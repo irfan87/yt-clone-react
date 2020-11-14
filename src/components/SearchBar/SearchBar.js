@@ -3,7 +3,7 @@ import "./SearchBar.css";
 
 export default class SearchBar extends Component {
 	state = {
-		searchVideo: "test",
+		searchVideo: "",
 	};
 
 	// for input when it change
@@ -15,9 +15,14 @@ export default class SearchBar extends Component {
 	onFormSubmit = (e) => {
 		e.preventDefault();
 
-		console.log("submittted");
+		const { onFormSubmit } = this.props;
+		const { searchVideo } = this.state;
 
-		// TODO: make sure we call the callback from the parent component
+		onFormSubmit(searchVideo);
+
+		this.setState({
+			searchVideo: "",
+		});
 	};
 
 	render() {
